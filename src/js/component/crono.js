@@ -4,9 +4,16 @@ function Crono({ digito1, digito2, digito3, digito4, digito5, digito6 }) {
   const digitos = [digito6, digito5, digito4, digito3, digito2, digito1];
 
   return (
-    <div className="row">
+    <div className="row bg-dark">
+      <div className="col-sm-1 mb-3 mb-sm-0">
+        <div className="card">
+          <div className="card-body bg-dark text-white">
+            <p className="card-text"><i className="fa fa-clock"></i></p>
+          </div>
+        </div>
+      </div>
       {digitos.map((digito, index) => (
-        <div key={index} className="col-sm-2 mb-3 mb-sm-0">
+        <div key={index} className="col-sm-1 mb-3 mb-sm-0">
           <div className="card">
             <div className="card-body bg-dark text-white">
               <p className="card-text">{digito}</p>
@@ -17,4 +24,5 @@ function Crono({ digito1, digito2, digito3, digito4, digito5, digito6 }) {
     </div>
   );
 }
+
 export default Crono;
